@@ -1,0 +1,43 @@
+.header{
+	background-color: $semiTransparentWhite;
+	border-bottom: 1px solid $borderColor;
+}
+
+
+$headerHeight: 61px;
+$headerLinkWidth: 86px;
+.fixed-top{
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 9001;
+}
+
+.chrome{
+	background: $semiTransparentWhite;
+}
+
+.main-nav{
+	height: $headerHeight;
+
+	> li{
+		background: transparent;
+		> a{
+			padding: 0;
+			background: transparent !important;
+			color: $fontColor !important;
+			height: $headerHeight - 1px;
+			width: $headerLinkWidth;
+			line-height: $headerHeight - 1px;
+			font-size: $headerHeight/4;
+			text-align: center;
+		}
+	}
+	> li:hover{
+		border-bottom:2px solid $highLightLink;
+	}
+
+	> li.active{
+		border-bottom:2px solid $activeLink;
+	}
+}

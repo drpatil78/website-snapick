@@ -1,0 +1,32 @@
+section[data-full-screen]{
+	//background: url('/images/backgrounds/hero1.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	tagline{
+		font-size: 150%;
+		text-align: center;
+	}
+
+	tagline[bottom]{
+		position: absolute;
+		bottom: 0%;
+		width: 100%;
+	}
+}
+
+@media(min-width: $screen-md){
+	section[data-full-screen]{
+		height: 100vh;
+		position: relative;
+	}	
+}
+
+
+sub-sections{
+	display: -webkit-flex;
+	> sub-section{
+		display: block;
+		flex: 1;
+	}
+}
