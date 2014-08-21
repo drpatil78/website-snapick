@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/filament-sticky/fixedsticky.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,7 +23,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header fixed-top">
+    <header class="header navbar-fixed-top">
       <div class="container">
         <ul class="main-nav nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Smart</a></li>
@@ -32,55 +33,47 @@
         </ul>
         <h1 class="heading">Snapick</h1>
       </div>
-    </div>
-    <section data-full-screen="true">
-      <content></content>
-      <tagline bottom>
-        <h2><b>Photos</b> aren't just bunch of pixels</h2>
-        <p style="max-width:600px; margin:0px auto 50px;">Every picture has a story. <b>Snapick</b> is where all your photos come to life, its a reinvented photo browsing experience which brings back your precious memories to you, in the best way possible!</p>
-      </tagline>
+    </header>
+
+    <section data-full-screen="true" fixed fading-section>
+      <content full-height class="container">
+        <flex centered vertical>  
+          <!-- <div class="heading subtle centered"><h2>Snapick brings your photos back to you !</h2></div> -->
+          <div class="fixed-aspect-16-9">
+            <background>
+              <iframe width="100%" height="100%" src="//www.youtube.com/embed/5DHYe4dhjXw?controls=0&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen seamless></iframe>
+            </background>
+          </div>
+        </flex>  
+      </content>
     </section>
+
     <section data-full-screen="true">
-      <div class="container">
-        <sub-sections data-direction="horizontal">
-          <sub-section>
-            <content></content>
-          </sub-section>
-          <sub-section>
-            <content>
-              <tagline>
-                <h2><b>Smartest</b> way to browse photos</h2>              
-              </tagline>
-
-
-              <carousel>
-                
-                <slide>
-                  <content>
-                    <h1>Automagically Catalog Images</h1>
-                    <p>When we photos, we see them by whats inside of them, by context. Thats why we built an app which looks at these photos the same way identifying peoples, gestures, objects, and other highlighted objects. It then automatically catalogs these images depending upon the objects it found, on the event it was taken, the people in them .. and so on.</p>
-                  </content>
-                </slide>
-
-                <slide>
-                  <content>
-                    <h1>It learns !</h1>
-                    <p>Snapick automatically learns from you and is updated frequently with more knowledge. Thus it gets better everytime every single photo is added.</p>
-                  </content>
-                </slide>
-
-                <slide>
-                  <content>
-                    <h1>Its Natural</h1>
-                    <p></p>
-                  </content>
-                </slide>
-
-              </carousel>
-            </content>
-          </sub-section>
-        </sub-sections>
-      </div>
+      <tagline top>
+        <h2>An entirely new way to navigate across your photos</h2>
+        <br />
+      </tagline>
+      <content class="container" full-height>
+        <div class="col-md-8 col-lg-9" full-height>
+          <flex vertical centered>
+            <div class="row">
+              <img class="img-responsive" src="http://placehold.it/1024x768">
+            </div>
+          </flex>
+        </div>
+        <div class="col-md-4 col-lg-3" full-height>
+          <flex vertical centered>
+            <div class="row">
+              <ul class="list-unstyled" id="searchFeatureList">
+                <li class="active">By People</li>
+                <li>By People</li>
+                <li>By People</li>
+                <li>By People</li>
+              </ul>
+            </div>
+          </flex>
+        </div>
+      </content>
     </section>
   
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -124,6 +117,8 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/filament-fixed/fixedfixed.js"></script>
+    <script src="bower_components/filament-sticky/fixedsticky.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -131,6 +126,11 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/directives/fixedsticky.js"></script>
+        <script src="scripts/directives/background.js"></script>
+        <script src="scripts/directives/section.js"></script>
+        <script src="scripts/directives/content.js"></script>
+        <script src="scripts/directives/fading-section.js"></script>
         <!-- endbuild -->
 </body>
 </html>

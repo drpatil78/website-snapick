@@ -5,3 +5,20 @@
 body{
 	background: transparent;
 }
+
+
+flex{
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+flex[vertical]{
+	flex-direction: column;
+}
+
+flex[space-between]{
+	justify-content: space-between;
+}
+flex[centered]{
+	justify-content: center;
+}

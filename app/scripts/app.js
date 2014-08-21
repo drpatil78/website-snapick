@@ -1,4 +1,5 @@
 'use strict';
+//window.FixedSticky.tests.sticky = false;
 
 /**
  * @ngdoc overview
@@ -8,6 +9,8 @@
  *
  * Main module of the application.
  */
+
+
 angular
   .module('websiteSnapickApp', [
     'ngAnimate',
@@ -18,6 +21,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

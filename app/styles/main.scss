@@ -2,6 +2,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
+@import "compass/css3/shared";
 @import "./fontello.css";
 @import "./core/base.scss";
 @import "./partials/all.scss";
+
+.fixedsticky{
+  z-index: 1000;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}

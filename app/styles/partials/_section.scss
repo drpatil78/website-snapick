@@ -1,4 +1,6 @@
+
 section[data-full-screen]{
+	background: #fff;
 	//background: url('/images/backgrounds/hero1.jpg') no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -18,10 +20,20 @@ section[data-full-screen]{
 @media(min-width: $screen-md){
 	section[data-full-screen]{
 		height: 100vh;
+		width: 100vw;
 		position: relative;
 	}	
 }
 
+section[fixed]{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+
+section[fixed] + section{
+	@include experimental-value(margin-top, calc(100vh - 100px));
+}
 
 sub-sections{
 	display: -webkit-flex;
