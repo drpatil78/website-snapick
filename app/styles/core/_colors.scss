@@ -1,0 +1,17 @@
+
+// core font colors
+$fontColor: #343434;
+$headingColor: darken($fontColor, 15%);
+$backgroundColor: #fff;
+$deepHeading: #000;
+
+// applisque border
+$borderColor: #aaa;
+
+
+// theming
+
+$highLightLink: rgba(17,108, 128, 0.6);
+$activeLink: rgba(17,18, 18, 0.6);
+
+$semiTransparentWhite: transparentize($backgroundColor, 0.1);
