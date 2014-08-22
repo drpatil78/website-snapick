@@ -12,13 +12,79 @@ flex{
 	height: 100%;
 	width: 100%;
 }
+
+flex[absolute]{
+	position: absolute;
+}
 flex[vertical]{
 	flex-direction: column;
 }
 
-flex[space-between]{
+flex[space-between-xs]{
 	justify-content: space-between;
 }
-flex[centered]{
+
+flex[centered-xs]{
 	justify-content: center;
+}
+
+flex[bottom-xs]{
+	justify-content: flex-end;
+}
+
+
+@media(min-width: $screen-sm){
+	flex[top-sm]{
+		justify-content: flex-start;		
+	}
+
+	flex[space-between-sm]{
+		justify-content: space-between;
+	}
+
+	flex[centered-sm]{
+		justify-content: center;
+	}
+
+	flex[bottom-sm]{
+		justify-content: flex-end;
+	}
+}
+
+
+@media(min-width: $screen-md){
+	flex[top-md]{
+		justify-content: flex-start;		
+	}
+	
+	flex[space-between-md]{
+		justify-content: space-between;
+	}
+
+	flex[centered-md]{
+		justify-content: center;
+	}
+
+	flex[bottom-md]{
+		justify-content: flex-end;
+	}
+}
+
+
+@media(min-width: $screen-lg){
+	flex[top-lg]{
+		justify-content: flex-start;		
+	}
+	
+	flex[space-between-lg]{
+		justify-content: space-between;
+	}
+
+	flex[centered-lg]{
+		justify-content: center;
+	}
+
+	flex[bottom-lg]{
+		justify-content: flex-end;
+	}	
 }

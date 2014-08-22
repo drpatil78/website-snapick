@@ -5,7 +5,9 @@
     <title></title>
     <meta name="description" content="Snapick is the future of how we see photos!">
     <meta name="viewport" content="width=device-width, max-scale=1, initial-scale=1">
+    <!-- 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    -->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -23,7 +25,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <header class="header navbar-fixed-top">
+    <header class="header hidden">
       <div class="container">
         <ul class="main-nav nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Smart</a></li>
@@ -37,7 +39,7 @@
 
     <section data-full-screen="true" fixed fading-section>
       <content full-height class="container">
-        <flex centered vertical>  
+        <flex top-md centered-lg vertical>  
           <!-- <div class="heading subtle centered"><h2>Snapick brings your photos back to you !</h2></div> -->
           <div class="fixed-aspect-16-9">
             <background>
@@ -46,46 +48,71 @@
           </div>
         </flex>  
       </content>
-    </section>
-
-    <section data-full-screen="true">
-      <tagline top>
+      <tagline bottom>
         <h2>An entirely new way to navigate across your photos</h2>
         <br />
       </tagline>
+    </section>
+
+    <section data-full-screen="true">      
       <content class="container" full-height>
         <div class="col-md-8 col-lg-9" full-height>
-          <flex vertical centered>
+          <flex vertical bottom-md centered-lg>
             <div class="row">
-              <img class="img-responsive" src="http://placehold.it/1024x768">
+              <img class="img-responsive" src="http://placehold.it/1200x800">
             </div>
           </flex>
         </div>
         <div class="col-md-4 col-lg-3" full-height>
-          <flex vertical centered>
+          <flex vertical centered-xs>
             <div class="row">
+              <h2>Now search photos by</h2>
               <ul class="list-unstyled" id="searchFeatureList">
-                <li class="active">By People</li>
-                <li>By People</li>
-                <li>By People</li>
-                <li>By People</li>
+                <li class="active">People</li>
+                <li>Places</li>
+                <li>Events</li>
+                <li>&amp; More</li>
               </ul>
             </div>
           </flex>
         </div>
       </content>
     </section>
-  
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+    <section data-full-screen="true">
+      <content class="container" full-height>
+        <flex vertical absolute bottom-xs>
+          <div class="col-xs-12 col-md-11 col-lg-10">
+            <div class="row">
+              <img class="img-responsive" src="/images/backgrounds/hero1.jpg"/>
+            </div>
+          </div>
+        </flex>
+
+        <flex vertical bottom-xs class="hidden-xs hidden-sm">
+          <div class="col-md-offset-9 col-md-3">
+            <div class="row">
+              <img class="img-responsive" src="/images/backgrounds/img4.jpg"/>
+            </div>
+          </div>
+        </flex>
+      </content>
+      <tagline bottom class="chrome solid-chrome">
+        <h2>Automagically Cataglog Images.</h2>
+      </tagline>
+    </section>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!--
+       <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-XXXXX-X');
+         ga('send', 'pageview');
+       </script>
+    -->
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>

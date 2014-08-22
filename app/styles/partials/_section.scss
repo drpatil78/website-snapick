@@ -1,6 +1,7 @@
 
 section[data-full-screen]{
 	background: #fff;
+	overflow: hidden;
 	//background: url('/images/backgrounds/hero1.jpg') no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -13,6 +14,12 @@ section[data-full-screen]{
 	tagline[bottom]{
 		position: absolute;
 		bottom: 0%;
+		width: 100%;
+	}
+
+	tagline[top]{
+		position: absolute;
+		top: 0;
 		width: 100%;
 	}
 }
@@ -32,7 +39,8 @@ section[fixed]{
 }
 
 section[fixed] + section{
-	@include experimental-value(margin-top, calc(100vh - 100px));
+	//@include experimental-value(margin-top, calc(100vh - 100px));
+	margin-top: 100vh;
 }
 
 sub-sections{
