@@ -10,10 +10,10 @@
 angular.module('websiteSnapickApp')
   .controller('MainCtrl', function ($scope) {
     $scope.featureTagLines = [
-    	'Cross Device Sync',
-    	'Filters Perfect',
-    	'Blah',
-    	'Blah Blah'
+    	'Streaming',
+    	'Syncing',
+    	'Sharing',
+    	'Filters',
     ];
 
     $scope.backgroundImages = [
