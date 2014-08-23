@@ -36,6 +36,9 @@ b{
 	margin: 0.1em;
 }
 
-.heading.centered{
+.centered{
 	text-align: center;
+}
+.invertedText{
+	color: $backgroundColor;
 }

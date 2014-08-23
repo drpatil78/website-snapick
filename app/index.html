@@ -42,11 +42,15 @@
       <content full-height class="container">
         <flex top-md centered-lg vertical>  
           <!-- <div class="heading subtle centered"><h2>Snapick brings your photos back to you !</h2></div> -->
-          <div class="fixed-aspect-16-9">
-            <background>
-              <!-- Use video Tag in here -->
-              <iframe width="100%" height="100%" type="text/html" src="http://www.youtube.com/embed/5DHYe4dhjXw?controls=0&modestbranding=1&showinfo=0" frameborder="0"></iframe>
-            </background>
+          <div class="row">
+            <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+              <div class="fixed-aspect-16-9">
+                <background>
+                  <!-- Use video Tag in here -->
+                  <iframe width="100%" height="100%" type="text/html" src="http://www.youtube.com/embed/5DHYe4dhjXw?controls=0&modestbranding=1&showinfo=0" frameborder="0"></iframe>
+                </background>
+              </div>
+            </div>
           </div>
         </flex>  
       </content>
@@ -56,7 +60,7 @@
       </tagline>
     </section>
 
-    <section data-full-screen="true">      
+    <section>      
       <content class="container" full-height>
         <div class="col-md-8 col-lg-9" full-height>
           <flex vertical bottom-md centered-lg>
@@ -81,7 +85,7 @@
       </content>
     </section>
 
-    <section data-full-screen="true">
+    <section>
       <content class="container" full-height>
         <!-- This can take a lil bit improvement -->
         <flex vertical absolute bottom-xs>
@@ -106,22 +110,44 @@
       </tagline>
     </section>
 
-    <section data-full-screen="true" id="gallery-features">
+    <section id="gallery-features">
       <background ng-style="state.featureBackgroundStyle" class="faded fixed"></background>
       <content class="container" full-height>
         <div class="heading centered"><h2 >Bursting With Features</h2></div>
         <ul rn-carousel rn-carousel-index="state.activeSlide" class="image-gallery">
-          <li ng-repeat="index in [1,2,3,4]"><img class="img-responsive centered" ng-src="{{ '/images/apple/img' + index + '.jpg' }}"/></li>
+          <li ng-repeat="index in [1,2,3,4]"><img non-draggable class="img-responsive centered" ng-src="{{ '/images/apple/img' + index + '.jpg' }}"/></li>
         </ul>
+        <div class="centered">
+          <h2 ng-bind="state.featureTagLine"></h2>
+        </div>
       </content>
-      <tagline bottom><h2 ng-bind="state.featureTagLine"></h2></tagline>
     </section>
 
-    <section data-full-screen="true" id="gallery-features">
-      <background></background>
+    <section id="gallery-features-2" data-full-screen="true">
+      <background>
+        <team></team>
+      </background>
       <content class="container" full-height>
+        <flex vertical centered-xs>
+          <flex space-around-xs centered-items-xs>
+            <div class="team-member">
+              <img src="http://lorempixel.com/320/320/" class="img-responsive"/>
+              <div class="info">
+                <h2>Sneha Patil</h2>
+                <h4>CEO &amp; Co - Founder</h4>
+              </div>
+            </div>
+            <div class="team-member">
+              <img src="http://lorempixel.com/320/320/?t=234" class="img-responsive"/>
+              <div class="info">
+                <h2>Sneha Patil</h2>
+                <h4>CTO &amp; Co - Founder</h4>
+              </div>
+            </div>
+          </flex>
+        </flex>
       </content>
-      <tagline top><h2>The Team</h2></tagline>
+      <tagline top><h2 class="invertedText">The Team</h2></tagline>
     </section>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -170,6 +196,8 @@
         <script src="scripts/directives/section.js"></script>
         <script src="scripts/directives/content.js"></script>
         <script src="scripts/directives/fading-section.js"></script>
+        <script src="scripts/directives/non-draggable.js"></script>
+        <script src="scripts/directives/team.js"></script>
         <!-- endbuild -->
 </body>
 </html>

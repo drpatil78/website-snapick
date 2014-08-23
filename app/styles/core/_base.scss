@@ -16,8 +16,17 @@ flex{
 flex[absolute]{
 	position: absolute;
 }
+
 flex[vertical]{
 	flex-direction: column;
+}
+
+flex[centered-items-xs]{
+	align-items: center;
+}
+
+flex[space-around-xs]{
+	justify-content: space-around;
 }
 
 flex[space-between-xs]{

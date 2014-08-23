@@ -24,3 +24,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .img-responsive.centered{
 	margin: 0px auto;
 }
+
+canvas{
+	background-color: #000;
+}
+
+.team-member{
+	background: #fff;
+	max-width: 320px;
+	max-height: 480px;
+	> .info{
+		padding:0 15px;
+	}
+}
