@@ -83,10 +83,10 @@ angular.module('websiteSnapickApp')
       	Particle.prototype.move = function(maxX, maxY){
       		this.x += this.xVel;
       		this.y += this.yVel;
-      		if( this.x < 0 || this.x > maxX ){
+      		if( this.x < -10 || this.x > maxX ){
       			this.dead = true;
       		}
-      		if( this.y < 0 || this.x > maxY ){
+      		if( this.y < -10 || this.y > maxY ){
       			this.dead = true;
       		}
       	}
