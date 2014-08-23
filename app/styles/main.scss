@@ -13,3 +13,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   top: 0px;
   left: 0px;
 }
+
+
+#gallery-features .rn-carousel-container{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	overflow: visible;
+}
+
+.img-responsive.centered{
+	margin: 0px auto;
+}
