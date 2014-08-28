@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Snapick Me</title>
     <meta name="description" content="Snapick is the future of how we see photos!">
-    <meta name="viewport" content="width=device-width, max-scale=1, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
     <!-- 
     -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
@@ -39,7 +39,12 @@
     </header>
 
     <section data-full-screen="true" fixed fading-section>
-      <content full-height class="container">
+      <background class="fixed">
+        <cover-demo data-images="feedImages">
+          <img class="demo-feed-element" ng-repeat="image in feedImages track by $index" ng-src="{{image.url}}"/>\
+        </cover-demo>
+      </background>
+      <content class="hidden" full-height class="container">
         <flex top-md centered-lg vertical>  
           <!-- <div class="heading subtle centered"><h2>Snapick brings your photos back to you !</h2></div> -->
           <div class="row">
@@ -55,108 +60,109 @@
         </flex>  
       </content>
       <tagline bottom>
-        <h2>An entirely new way to navigate across your photos</h2>
+        <h2>The perfect photos app !</h2>
         <br />
       </tagline>
     </section>
 
     <section>      
       <content class="container" full-height>
-        <div class="col-md-8 col-lg-9" full-height>
-          <flex vertical bottom-md centered-lg>
-            <div class="row">
-              <img class="img-responsive" src="http://placehold.it/1200x800">
-            </div>
-          </flex>
+        <div class="heading centered">
+          <h2>A smarter, context aware search</h2>
         </div>
-        <div class="col-md-4 col-lg-3" full-height>
-          <flex vertical centered-xs>
-            <div class="row">
-              <h2>Now search photos by</h2>
-              <ul class="list-unstyled" id="searchFeatureList">
-                <li class="active">People</li>
-                <li>Places</li>
-                <li>Events</li>
-                <li>&amp; More</li>
-              </ul>
-            </div>
-          </flex>
+        <div class="row">
+          <div class="col-xs-12">
+            <img class="img-responsive" src="http://placehold.it/1200x800">
+          </div>
+        </div>
+        <div class="row centered">
+          <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <p>When you have access to thousands of photos it is to find a photo, to resolve that we built an intelligent search that knows whats inside the images. We then allow you to search for an image by describing it in english. Thus we built the smartest search which brings you your photos in the least possible effort. It enables you to search for <b>People</b>, <b>Places</b>, <b>Events</b>, and even more !</p>
+          </div>
         </div>
       </content>
     </section>
 
-    <section>
-      <content class="container" full-height>
-        <!-- This can take a lil bit improvement -->
-        <flex vertical absolute bottom-xs>
-          <div class="col-xs-12 col-md-11 col-lg-10">
-            <div class="row">
-              <img class="img-responsive" src="/images/backgrounds/hero1.jpg"/>
-            </div>
-          </div>
-        </flex>
-
-        <flex vertical bottom-xs class="hidden-xs hidden-sm">
-          <div class="col-md-offset-9 col-md-3">
-            <div class="row">
-              <img class="img-responsive" src="/images/backgrounds/img4.jpg"/>
-            </div>
-          </div>
-        </flex>
-      </content>
-
-      <tagline bottom class="chrome solid-chrome">
-        <h2>Automagically Cataglog Images.</h2>
-      </tagline>
-    </section>
-
+    
     <section id="gallery-features">
       <background ng-style="state.featureBackgroundStyle" class="faded fixed"></background>
       <content class="container" full-height>
         <div class="heading centered"><h2 >Bursting With Features</h2></div>
         <ul rn-carousel rn-carousel-index="state.activeSlide" class="image-gallery">
-          <li ng-repeat="index in [1,2,3,4]"><img non-draggable class="img-responsive centered" ng-src="{{ '/images/apple/img' + index + '.jpg' }}"/></li>
+          <li ng-repeat="index in [1,2,3,4]"><img non-draggable class="img-responsive centered" ng-src="{{ '/images/app/Cloud.png' }}"/></li>
         </ul>
         <div class="centered">
           <h2 ng-bind="state.featureTagLine"></h2>
         </div>
       </content>
     </section>
-
-    <section id="gallery-features-2" data-full-screen="true">
-      <background>
-        <team></team>
-      </background>
+    
+    <section>
       <content class="container" full-height>
-        <flex vertical centered-xs>
-          <flex space-around-xs centered-items-xs>
-            <div class="team-member">
-              <img src="http://lorempixel.com/320/320/" class="img-responsive"/>
-              <div class="info">
-                <h2>Sneha Patil</h2>
-                <h4>CEO &amp; Co - Founder</h4>
-              </div>
-            </div>
-            <div class="team-member">
-              <img src="http://lorempixel.com/320/320/?t=234" class="img-responsive"/>
-              <div class="info">
-                <h2>Abhishek Hingnikar</h2>
-                <h4>CTO &amp; Co - Founder</h4>
-              </div>
-            </div>
-
-            <div class="team-member">
-              <img src="http://lorempixel.com/320/320/?t=234" class="img-responsive"/>
-              <div class="info">
-                <h2>It could be you !</h2>
-                <h4>Join Us</h4>
-              </div>
-            </div>
-
-          </flex>
-        </flex>
+        <div class="heading centered">
+          <h2>Sharing Photos was never so <b>simple</b> &amp; <b>secure</b></h2>
+        </div>
+        <video src="/videos/social-features-animation.mp4" autoplay loop class="col-md-12"></video>
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 centered">
+          <p>Snapick comes with inbuilt social network, which allows you to share your photos with your friends &amp; family with ease. It also integrates with popular social networks and organizes the content automagically, so you never miss a moment ever &amp; stay social !</p>
+        </div>
       </content>
-      <tagline top><h2 class="invertedText">The Team</h2></tagline>
+      
+    </section>
+ 
+    <section id="team" >
+      <background>
+        <background class="fixed" style="background-image: url(/images/backgrounds/spartans.jpg);"></background>
+      </background>
+      <content class="container centered" full-height>
+        <div class="heading">
+            <h2>People Behind Snapick</h2>
+        </div>
+        <div>
+          <a href="http://twitter.com/drpatil78">
+            <div class="team-member">
+              <img src="https://pbs.twimg.com/profile_images/422754549405724672/21Zr9s0k.jpeg" class="img-responsive"/>
+              <div class="info">
+                <h2 class="hidden-sm name">Sneha Patil</h2>
+                <h2 class="visible-sm name">@DrPatil78</h2>
+                <h4 class="title">CEO &amp; Co - Founder</h4>
+              </div>
+            </div>
+          </a>
+
+          <a href="http://twitter.com/darkyen00">
+            <div class="team-member">
+              <img src="https://pbs.twimg.com/profile_images/502797946706870272/-YFY4fhR.jpeg" class="img-responsive"/>
+              <div class="info">
+                <h2 class="hidden-sm name">Abhishek Hingnikar</h2>
+                <h2 class="visible-sm name">@darkyen</h2>
+                <h4 class="title">CTO &amp; Co - Founder</h4>
+              </div>
+            </div>
+          </a>
+
+          <a href="http://twitter.com/jhawins">
+            <div class="team-member">
+              <img src="https://pbs.twimg.com/profile_images/1252087254/image.jpg" class="img-responsive"/>
+              <div class="info">
+                <h2 class="hidden-sm name">Josiah D South</h2>
+                <h2 class="visible-sm name">@jhawins</h2>
+                <h4 class="title">Developer</h4>
+              </div>
+            </div>
+          </a>
+
+          <a href="/join/us">
+            <div class="team-member">
+              <img src="http://lorempixel.com/320/320/?t=234" class="img-responsive"/>
+              <div class="info">
+                <h2 class="name">It could be you !</h2>
+                <h4 class="title">Join Us</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </content>
     </section>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -184,6 +190,18 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -207,6 +225,7 @@
         <script src="scripts/directives/fading-section.js"></script>
         <script src="scripts/directives/non-draggable.js"></script>
         <script src="scripts/directives/team.js"></script>
+        <script src="scripts/directives/cover-demo.js"></script>
         <!-- endbuild -->
 </body>
 </html>

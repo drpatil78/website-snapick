@@ -22,6 +22,14 @@ angular.module('websiteSnapickApp')
     	'hero4',
     	'hero5'	
     ];
+
+    $scope.feedImages = [
+    	{ url: 'http://lorempixel.com/967/967/?t=1' },
+    	{ url: 'http://lorempixel.com/967/967/?t=2' },
+    	{ url: 'http://lorempixel.com/967/967/?t=3' },
+    	{ url: 'http://lorempixel.com/967/967/?t=4' },
+    ];
+
     $scope.state = {
     	featureBackgroundStyle : {
     		backgroundImage: ''

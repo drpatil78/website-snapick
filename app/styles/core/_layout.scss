@@ -34,6 +34,8 @@ $headerLinkWidth: 86px;
 }
 
 .background{
+	-webkit-user-select: none;
+	-moz-user-select: none;
 	z-index: 0;
 	position: absolute;
 	width: 100%;

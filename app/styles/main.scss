@@ -2,7 +2,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
-@import "compass/css3/shared";
+@import "compass/css3/deprecated-support";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
 @import "./fontello.css";
 @import "./core/base.scss";
 @import "./partials/all.scss";
@@ -30,10 +33,69 @@ canvas{
 }
 
 .team-member{
-	background: #fff;
-	max-width: 320px;
-	max-height: 480px;
+	display: inline-block;
+	padding: 20px 0 10px;
+
+	@media(min-width: $screen-sm){
+		width: 192px;
+	}
+	
+	@media(min-width: $screen-md){
+		width: 240px;
+	}
+
+	@media(min-width: $screen-lg){
+		width: 240px;
+	}
+	
+	> .img-responsive{
+		width: 75%;
+		margin: 0px auto;
+		border-radius: 50%;
+	}
+	
 	> .info{
-		padding:0 15px;
+		text-align: center;
+		
+	}
+	
+	.name{
+		font-weight: 400;
+	}
+	
+	.title{
+		font-weight: bold;
+		font-size: 80%;
+		color: lighten($fontColor, 25%);
 	}
 }
+
+#team{
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.demo-feed{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+
+	> .demo-feed-inner{
+		-webkit-transform: rotateZ(0deg);
+		height: 100%;
+		position: relative;
+		white-space: nowrap;
+		overflow-x: scroll;
+		margin-bottom: -20px;
+		padding-bottom: 20px;
+		box-sizing: content-box;
+	}
+	
+	.demo-feed-element{
+		height: 100%;
+	}
+}
+
