@@ -60,7 +60,7 @@
         </flex>  
       </content>
       <tagline bottom>
-        <h2>The perfect photos app !</h2>
+        <h2>New Era of Photo-Browsing!</h2>
         <br />
       </tagline>
     </section>
@@ -87,12 +87,17 @@
     <section id="gallery-features">
       <background ng-style="state.featureBackgroundStyle" class="faded fixed"></background>
       <content class="container" full-height>
-        <div class="heading centered"><h2 >Bursting With Features</h2></div>
+        <div class="heading centered"><h2 ng-bind="state.featureTagLine">Bursting With Features</h2></div>
         <ul rn-carousel rn-carousel-index="state.activeSlide" class="image-gallery">
-          <li ng-repeat="index in [1,2,3,4]"><img non-draggable class="img-responsive centered" ng-src="{{ '/images/app/Cloud.png' }}"/></li>
+          <li ng-repeat="index in [1,2,3,4]">
+            <img non-draggable class="img-responsive centered" ng-src="{{ featurePhotos[ $index ] }}"/>
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+              <p class="centered" ng-bind="featureExplanations[ $index ]"></p>
+            </div>
+          </li>
         </ul>
         <div class="centered">
-          <h2 ng-bind="state.featureTagLine"></h2>
+          <h2 ></h2>
         </div>
       </content>
     </section>

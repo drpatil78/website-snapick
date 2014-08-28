@@ -9,11 +9,28 @@
  */
 angular.module('websiteSnapickApp')
   .controller('MainCtrl', function ($scope) {
+  
     $scope.featureTagLines = [
-    	'Streaming',
-    	'Syncing',
-    	'Sharing',
-    	'Filters',
+    	'Introducing the Photosphere',
+        'Organize your photos smartly',
+    	'Enhance & Filter',
+        'Design',
+        
+    ];
+    
+    $scope.featurePhotos = [
+        '/images/app/Cloud.png',
+        '/images/app/catalog.png',
+        '/images/app/Cloud.png',
+        '/images/app/Cloud.png'
+    ];
+    
+    $scope.featureExplanations = [
+
+        'Photosphere (TM) is the collection of all your photos in multiple cloud & social services, At one place. The smart photosphere you can access all your photos, without filling your device.',
+        'Snapick organizes your library smartly, buidling Smart Folders(tm) these dynamic folders are built on content and make it easy to browse through photos.',
+        'Snapick comes with simple yet powerful filters and editing tools to enhance your photos, whats more is using our incredible AI we provide automated suggestions that are content aware.',
+        'Snapick is designed from ground up to provide your photos the respect they deserve, the app adapts automatically with the content appearing fresh and appealing everytime in a brand new way !',
     ];
 
     $scope.backgroundImages = [
@@ -35,7 +52,7 @@ angular.module('websiteSnapickApp')
     		backgroundImage: ''
     	},
     	featureTagLine: $scope.featureTagLines[0],
-    	activeSlide: 0
+        activeSlide: 0
     }
 
     function setBackgroundStyle(index){
