@@ -77,6 +77,13 @@ canvas{
 	}
 }
 
+#header{
+	bottom: -17px;
+	height: auto;
+}
+#pusher{
+	visibility: hidden;
+}
 .demo-feed{
 	position: relative;
 	height: 100%;
@@ -89,13 +96,17 @@ canvas{
 		position: relative;
 		white-space: nowrap;
 		overflow-x: scroll;
-		margin-bottom: -20px;
-		padding-bottom: 20px;
 		box-sizing: content-box;
 	}
 	
 	.demo-feed-element{
 		height: 100%;
 	}
+}
+
+html,body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 

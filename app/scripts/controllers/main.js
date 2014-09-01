@@ -27,7 +27,7 @@ angular.module('websiteSnapickApp')
     
     $scope.featureExplanations = [
 
-        'Photosphere (TM) is the collection of all your photos in multiple cloud & social services, At one place. The smart photosphere you can access all your photos, without filling your device.',
+        'Photosphere (TM) is the collection of all your photos in multiple cloud & social services, In one place. The smart photosphere you can access all your photos, without filling your device.',
         'Snapick organizes your library smartly, buidling Smart Folders(tm) these dynamic folders are built on content and make it easy to browse through photos.',
         'Snapick comes with simple yet powerful filters and editing tools to enhance your photos, whats more is using our incredible AI we provide automated suggestions that are content aware.',
         'Snapick is designed from ground up to provide your photos the respect they deserve, the app adapts automatically with the content appearing fresh and appealing everytime in a brand new way !',
@@ -41,10 +41,10 @@ angular.module('websiteSnapickApp')
     ];
 
     $scope.feedImages = [
-    	{ url: 'http://lorempixel.com/967/967/?t=1' },
-    	{ url: 'http://lorempixel.com/967/967/?t=2' },
-    	{ url: 'http://lorempixel.com/967/967/?t=3' },
-    	{ url: 'http://lorempixel.com/967/967/?t=4' },
+    	{ url: '/images/top/frag3.png' },
+    	{ url: '/images/top/frag2.png' },
+    	{ url: '/images/top/frag1.png' },
+    	{ url: '/images/top/frag4.png' },
     ];
 
     $scope.state = {
