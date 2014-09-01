@@ -26,22 +26,39 @@ angular.module('websiteSnapickApp')
       link: function postLink(scope, element, attrs) {
       	var animating = true;
       	var velocity = 20;
-      	var scrolly = element.find('.demo-feed-inner')[0];
-      	var el_list = scrolly.children;
-      	var scroll_pos = 0;
+      	var scrollingElement = element.find('.demo-feed-inner')[0];
+      	var elementList = scrollingElement.children;
+      	var scrollPos = 0;
+
+      	/*
+         * function updateContentArray
+         * return type : Reference to a Dom Element,
+         * The dom element will be pushed at the end of the .children of the gutter
+       	 */
+      	function updateContentArray(){
+      		var el = elementList[0];
+
+      		// Remove the first element;
+      		scrollingElement.removeChild( el );
+      		if( scope.updateContentArray ){
+      			scrollingElement.appendChild( scope.updateContentArray () );
+      		}else{
+      			scrollingElement.appendChild( el );
+      		}
+      	}
 
       	function move(){
       		//console.log( 'raf' );
 
-      		scroll_pos += 1;
-      		//alert(el_list[0].offsetWidth, scrolly.scrollLeft);
-      		if( el_list[0].offsetWidth < scroll_pos ){
+      		scrollPos += 1;
+      		//alert(elementList[0].offsetWidth, scrollingElement.scrollLeft);
+      		if( elementList[0].offsetWidth < scrollPos ){
       			// push it up the ass
-      			scroll_pos -= el_list[0].offsetWidth;
-      			scrolly.appendChild(el_list[0]);
+      			scrollPos -= elementList[0].offsetWidth;
+      			updateContentArray();
       		}
 
-      		scrolly.scrollLeft = (~~scroll_pos);
+      		scrollingElement.scrollLeft = (~~scrollPos);
       		if( animating === true ){
       			requestAnimationFrame(move, element[0]);
       		}

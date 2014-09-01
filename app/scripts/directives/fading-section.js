@@ -30,8 +30,9 @@ angular.module('websiteSnapickApp')
       		element.css('opacity', 1 - y/scrollMaxY );
       		child.css('transform', 'scale('+ Math.min((1 - y*0.25/scrollMaxY), 1) +')')
       	}
-
-      	window.addEventListener('scroll', handleWindowScroll);
+      	if( !(device.mobile() || device.tablet()) ){
+	      	window.addEventListener('scroll', handleWindowScroll);
+      	}
       }
     };
   });

@@ -39,6 +39,14 @@ b{
 .centered{
 	text-align: center;
 }
+
 .invertedText{
+
 	color: $backgroundColor;
+
+	b{	
+		font-weight: 300 !important;
+		color: goldenrod;
+	}
+
 }

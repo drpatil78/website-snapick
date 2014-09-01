@@ -45,9 +45,11 @@ $headerLinkWidth: 86px;
 	background-size: cover;
 
 }
+
 .background.fixed{
 	background-attachment: fixed;
 }
+
 .background.faded::after{
 	position: absolute;
 	top: 0px;
@@ -56,6 +58,11 @@ $headerLinkWidth: 86px;
 	content: ' ';
 	background: transparentize($backgroundColor, 0.5);
 }
+
+.background.faded.dark::after{
+	background: transparentize($darkBackgroundColor, 0.6);
+}
+
 .main-nav{
 	height: $headerHeight;
 
