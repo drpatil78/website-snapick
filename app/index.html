@@ -64,7 +64,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <img class="img-responsive" src="http://placehold.it/1200x800">
+            <video src="/videos/search720p.mp4" autoplay loop class="img-responsive"></video>
           </div>
         </div>
         <div class="row centered">
@@ -107,7 +107,9 @@
         </div>
       </content>
     </section>
-    
+    <!-- 
+     Finish it tomorrow
+
     <section>
       <background class="fixed faded dark" style="background-image: url(/images/backgrounds/hero2.jpg);"></background>
       <content class="container" full-height>
@@ -115,7 +117,7 @@
           <h2 class="invertedText">Sharing Photos was never so <b>simple</b> &amp; <b>secure</b></h2>
         </div>
         <div class="col-xs-12">
-          <video src="/videos/social-features-animation.mp4" loop class="img-responsive"></video>
+          <video src="/videos/social-features-animation.mp4" autoplay loop class="img-responsive"></video>
         </div>
         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 centered">
           <p class="invertedText">Snapick comes with inbuilt social network, which allows you to share your photos with your friends &amp; family with ease. It also integrates with popular social networks and organizes the content automagically, so you never miss a moment ever &amp; stay social !</p>
@@ -123,7 +125,7 @@
       </content>
       
     </section>
- 
+    -->
     <section id="team" >
       <background class="fixed" style="background-image: url(/images/backgrounds/spartans.jpg);"></background>
       <content class="container centered" full-height>
@@ -195,9 +197,6 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- endbuild -->
-    <!-- build:js(.) scripts/core.js -->
-    <script src="scripts/device.js"></script>
-    <!-- endbuild -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -229,6 +228,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/device.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
